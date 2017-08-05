@@ -22,20 +22,31 @@
 # @return a bool
 # def isBadVersion(version):
 
-class Solution(object):
-    def firstBadVersion(self, n):
+class Solution():
+    def __init__(self, versions, badVersions):
+        self.versions =  versions
+        self.badVersions = badVersionss
+
+    def isBadVersion(self, mid):
+        if mid in self.badVersions:
+            return True
+        else:
+            return False
+
+    def firstBadVersion(self):
         """
         :type n: int
         :rtype: int
         """
         left = 1
-        right = n
+        right = len(self.versions)
         while left <= right:
-            mid = int(left + right / 2)
-            if isBadVersion(mid):
+            mid = int((left + right) / 2)
+            if self.isBadVersion(mid):
                 right = mid - 1
             else:
                 left = mid + 1
         return left
 
-
+instance_1 = Solution([1,2,5,6,7,8,9,10], [6,7,8,9,10])
+print (instance_1.firstBadVersion())
