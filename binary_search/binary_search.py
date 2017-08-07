@@ -16,4 +16,4 @@ def binary_search(array, target):
 
 primes = [1, 3, 5, 7, 9]
 
-print binary_search(primes, 12)
+print (binary_search(primes, 12))

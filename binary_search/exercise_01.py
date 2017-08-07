@@ -25,7 +25,7 @@
 class Solution():
     def __init__(self, versions, badVersions):
         self.versions =  versions
-        self.badVersions = badVersionss
+        self.badVersions = badVersions
 
     def isBadVersion(self, mid):
         if mid in self.badVersions:
